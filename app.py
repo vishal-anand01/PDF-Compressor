@@ -290,5 +290,9 @@ def compress_pdf_file(input_path, output_path, target_size_kb):
             pass
         return True
 
+# if __name__ == '__main__':
+#     app.run(debug=True, host='0.0.0.0', port=5000)
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))  # Use PORT from env or fallback to 5000
+    app.run(debug=True, host='0.0.0.0', port=port)
